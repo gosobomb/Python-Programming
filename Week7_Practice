@@ -1,0 +1,85 @@
+'''
+def para2_func(v1, v2):
+    result = 0
+    result = v1+v2
+    return result
+
+def para3_func(v1, v2, v3):
+    result = 0
+    result = v1+v2+v3
+    return result
+
+hap=0
+hap=para2_func(10,20)
+print(f"매개변수가 2개인 함수를 호출한 결과 ==> {hap}")
+hap=para3_func(10,20,30)
+print(f"매개변수가 3개인 함수를 호출한 결과 ==> {hap}")
+'''
+'''
+def para_func(*para):
+    result = 0
+    for num in para:
+        result = result + num
+    return result
+
+hap = 0
+hap = para_func(10, 20)
+print(hap)
+hap = para_func(10, 20, 30)
+print(hap)
+hap = para_func(10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
+print(hap)
+'''
+'''
+def dic_func(**para):
+    for k in para.keys():
+        print(f"{k} --> {para[k]}명입니다.")
+
+dic_func(트와이스=9, 소녀시대=7, 걸스데이=4, 블랙핑크=4)
+'''
+'''
+import random
+def getNumber() :
+    return random.randrange(1, 46)
+
+lotto = []
+num=0
+
+print(f"** 로또 추첨을 시작합니다 **\n")
+
+while True:
+    num = getNumber()
+    if lotto.count(num) == 0:
+        lotto.append(num)
+    
+    if len(lotto) == 6:
+        break
+
+print(f"추첨된 로또 번호 ==> ",end = '')
+lotto.sort()
+for i in range(0,6):
+    print(f"{lotto[i]}", end = ' ')
+'''
+'''
+import Module1
+
+Module1.func1()
+Module1.func2()
+Module1.func3()
+'''
+'''
+from Module1 import func1, func2, func3
+
+func1()
+func2()
+func3()
+'''
+
+import calcpkg.operation
+import calcpkg.geometry
+
+print(calcpkg.operation.add(10, 20))
+print(calcpkg.operation.mul(10, 20))
+
+print(calcpkg.geometry.triangle_area(30,40))
+print(calcpkg.geometry.rectangle_area(30,40))
