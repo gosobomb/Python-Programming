@@ -9,6 +9,6 @@ while True:
         outFp.writelines(outStr + "\n")
     else:
         break
-
+    
 outFp.close()
 print("--- 정상적으로 파일에 씀 ---")
